@@ -33,28 +33,3 @@ Use it in CI/CD pipelines to auto-analyze errors on failure.
 $ error-insight analyze --log error.log
 
 ---
-
-### ✅ **As a Python Package**
-Import it into your Python apps to analyze exceptions at runtime.
-
-```bash
-$ error-insight analyze --log error.log
-$ from error_insight import analyze_error
-
-$ try:
-$     do_something_risky()
-$ except Exception as e:
-$     result = analyze_error(e)
-$     print(result['summary'])
-$     print(result['resolutions'])
-
----
-
-### ✅ **As a gRPC/Microservice**
-Language-agnostic service interface for use in Java, Go, etc.
-
--> Expose an HTTP or gRPC endpoint.
-
--> Send runtime error logs or stack traces as payload.
-
--> Get back a JSON response with analysis.
