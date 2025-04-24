@@ -1,7 +1,7 @@
 from openai import OpenAI
 import requests
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="<<your-openai-api-key-here>>")
 
 
 def ask_chatgpt_obsolete(error_info):
