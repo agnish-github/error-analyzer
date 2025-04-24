@@ -3,7 +3,7 @@ import requests
 
 ## If using ChatGPT, uncomment and update the api_key with your openAI api key. Then change the function name from ask_chatgpt_obsolete to ask_chatgpt.
 ## Similarly, rename the 2nd function below from ask_chatgpt to ask_chatgpt_obsolete if you are using Locally running LLMs
-## client = OpenAI(api_key="<<your-openai-api-key-here>>")
+client = OpenAI(api_key="<<your-openai-api-key-here>>")
 
 def ask_chatgpt_obsolete(error_info):
     ## This function is for making requests to ChatGPT
