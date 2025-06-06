@@ -4,6 +4,7 @@
 > Transform errors into insights, boost your productivity.
 
 [![Shell](https://img.shields.io/badge/language-shell-blue)](https://shields.io/)
+[![Python](https://img.shields.io/badge/language-python-blue)](https://shields.io/)
 [![Docker](https://img.shields.io/badge/container-docker-blue)](https://shields.io/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/agnish-github/error-analyzer.svg?style=social)](https://github.com/agnish-github/error-analyzer)
@@ -11,6 +12,7 @@
 _Built with the tools and technologies:_
 
 ![Shell](https://img.shields.io/badge/Shell-89e051?logo=gnu-bash&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
@@ -49,7 +51,7 @@ This project empowers developers to quickly identify and resolve runtime errors,
 
 This project requires:
 
-- Programming Language: **Shell**
+- Programming Language: **Shell**, **Python3**
 - Package Manager: **pip**
 - Container Runtime: **Docker**
 
@@ -63,29 +65,28 @@ This project requires:
 git clone https://github.com/agnish-github/error-analyzer
 ```
 
-### 2. Navigate to the project directory
+### 2. Install the dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+### 3. Navigate to the project directory
 
 ```bash
 cd error-analyzer
 ```
 
-### 3. Install the dependencies
-
-```bash
-bash install.sh
-```
-
----
-
 ## Usage
 
 ```bash
-./analyze.sh
+python3 main.py
 ```
 
 ---
 
-## Testing
+## Testing (Coming soon)
 
 Run test scripts:
 
