@@ -9,7 +9,7 @@ def ask_chatgpt_alt(error_info):
     ## This function is for making requests to ChatGPT
     prompt = f"""
     I've got the following error in a program:
-    ---
+    ---s
     Type: {error_info['type']}
     Message: {error_info['message']}
     Traceback:
@@ -22,19 +22,19 @@ def ask_chatgpt_alt(error_info):
 
     response = client.chat.completions.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": prompt}])
     return response.choices[0].message.content
-
-def ask_chatgpt(prompt: str):
-    ## This function is to make requests to the locally running LLM Model
+    
+def ask_chatgpt(error_info):
     url = "http://localhost:11434/api/generate"
-    data = {
-        "model": "phi3",  # or whichever model you downloaded
+    prompt = f"{error_info['type']}: {error_info['message']}"
+    print(f"Sending request to {url} with prompt: {prompt}")
+    payload = {
+        "model": "phi3:latest",
         "prompt": prompt,
         "stream": False
     }
-
     try:
-        response = requests.post(url, json=data)
+        response = requests.post(url, json=payload)
         response.raise_for_status()
-        return response.json().get("response", "No response from model.")
-    except requests.RequestException as e:
+        return response.json()["response"]
+    except requests.exceptions.RequestException as e:
         return f"Local AI error: {e}"
