@@ -19,3 +19,6 @@ build-backend = "poetry.core.masonry.api"
 
 [project.scripts]
 ai-error-analyzer = "ai_error_analyzer.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
