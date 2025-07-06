@@ -1,5 +1,5 @@
-from error_catcher import install_global_hook
-from ai_helper import ask_chatgpt
+from .error_catcher import install_global_hook
+from .ai_helper import ask_chatgpt
 
 def handle_error(error_info):
     print("Error captured! Analyzing with AI Agent...")
